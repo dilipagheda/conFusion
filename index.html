@@ -9,7 +9,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <title>Ristorante Con Fusion</title>
@@ -37,7 +37,7 @@
                             Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal" href="#" class="nav-link">
+                    <a href="#" class="nav-link" id="login">
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -85,7 +85,7 @@
     </div>
 
     <!-- modal for reserver table -->
-    <div id="reserveTable" class="modal fade" role="dialog">
+    <div id="reserveTableModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
@@ -159,8 +159,8 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-lg-3">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal"
-                        data-target="#reserveTable" href="#reserveform">Reserve Table</a>
+                    <a role="button" class="btn btn-block nav-link btn-warning" id="reserveTable"
+                        >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -349,6 +349,15 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
+        $(document).ready(function(){
+            //display reserve table modal
+            $('#reserveTable').click(function(){
+                $('#reserveTableModal').modal('show');
+            })
+            //display login modal
+            $('#login').click(function(){
+                $('#loginModal').modal('show');
+            })
             $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
                     $("#mycarousel").carousel('pause');
@@ -361,6 +370,8 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+        })
+
     </script>
 </body>
 
