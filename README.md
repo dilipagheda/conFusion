@@ -8,5 +8,5 @@ This is the Project built using Bootstrap as part of a Full stack Web Developmen
 * Grunt & Gulp - Task runners
 
 # Screenshots
-![Screenshot1]
-(https://github.com/dilipagheda/conFusion/blob/master/screenshots/desktop.png)
+![Screenshot1](./screenshots/desktop.png)
+
